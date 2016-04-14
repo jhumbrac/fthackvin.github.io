@@ -1,0 +1,55 @@
+<html>
+<head>
+	<script type="text/javascript" src="./jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="./parallax.js"></script>
+	<style>
+		* { padding:0; margin:0; }
+		html, body { width:100%; height:100%; }
+		
+		.primary { position:absolute; width:100%; height:600px; overflow:hidden; }
+		.parallax {
+			position:absolute;
+			width:100%; height:500px;
+			background-position:bottom center;
+			background-size:auto 500px;
+		}
+		
+		.layer-0 { top:-50px; background-image:url('./parallax0.png'); }
+		.layer-1 { top:-20px; background-image:url('./parallax1.png'); }
+		.layer-2 { top:0px; background-image:url('./parallax2.png'); }
+		.layer-3 { top:50px; background-image:url('./parallax3.png'); }
+		.layer-4 { top:90px; background-image:url('./parallax4.png'); }
+		.layer-5 { top:120px; background-image:url('./parallax5.png'); }
+		.layer-6 { top:150px; background-image:url('./parallax6.png'); }
+		.layer-7 { top:200px; background-image:url('./parallax7.png'); }
+		.layer-8 { top:350px; background-image:url('./parallax8.png'); }
+
+	</style>
+</head>
+
+<script>
+	$(function () {
+		new ParallaxManager('.parallax');
+	});
+</script>
+
+<body>
+
+	<div class="primary">
+		<div class="parallax layer-0" data-parallax-speed="0" data-max-scroll="565"></div>
+		<div class="parallax layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
+		<div class="parallax layer-2" data-parallax-speed="0.2" data-max-scroll="565"></div>
+		<div class="parallax layer-3" data-parallax-speed="0.4" data-max-scroll="565"></div>
+		<div class="parallax layer-4" data-parallax-speed="0.6" data-max-scroll="565"></div>
+		<div class="parallax layer-5" data-parallax-speed="0.8" data-max-scroll="565"></div>
+		<div class="parallax layer-6" data-parallax-speed="0.9" data-max-scroll="565"></div>
+		<div class="parallax layer-7" data-parallax-speed="1.0" data-max-scroll="565"></div>
+		<div class="parallax layer-8" data-parallax-speed="5.0" data-max-scroll="565"></div>
+
+	</div>
+
+	<div style="width:100%; height:100%; background-color:black;"></div>
+	<div style="width:100%; height:100%; background-color:red;"></div>
+
+</body>
+</html>
